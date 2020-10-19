@@ -57,6 +57,7 @@ from detectron2.data import detection_utils as utils
 
 
 def MyDatasetMapper(dataset_dict):
+    
     # Implement a mapper, similar to the default DatasetMapper, but with your own customizations
 
     dataset_dict = copy.deepcopy(dataset_dict)  # it will be modified by code below

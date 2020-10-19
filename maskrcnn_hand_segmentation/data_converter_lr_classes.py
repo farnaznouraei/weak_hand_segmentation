@@ -42,7 +42,7 @@ from tqdm import tqdm
 
 def get_hand_dicts(path , mode = 'train'):
 
-  annot_file = loadmat(os.path.join(path, 'egohands_data', 'metadata.mat'))
+  annot_file = loadmat(os.path.join(path, 'data', 'egohands_data', 'metadata.mat'))
   num_videos = annot_file['video'].shape[1]
   num_frames = annot_file['video']['labelled_frames'][0,0].shape[1]
 
@@ -92,7 +92,7 @@ def get_hand_dicts(path , mode = 'train'):
 
       # Load the corresponding image
       video_id = annot_file['video']['video_id'][0,i]
-      filename = os.path.join(path+'/egohands_data/_LABELLED_SAMPLES/'+video_id[0]+'/frame_'+ frame_num +'.jpg')
+      filename = os.path.join(path+'data/egohands_data/_LABELLED_SAMPLES/'+video_id[0]+'/frame_'+ frame_num +'.jpg')
       img = cv2.imread(filename, cv2.IMREAD_COLOR)
 
       height, width = img.shape[:2]
