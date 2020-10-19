@@ -1,0 +1,40 @@
+# Model Configuration
+model:
+    arch: segnet
+
+# Data Configuration
+data:
+    dataset: pascal
+    train_split: train
+    val_split: val
+    img_rows: 512
+    img_cols: 512
+    path: /home/ubuntu/data/VOC/VOCdevkit/VOC2012
+    sbd_path: /home/ubuntu/data/VOC/benchmark_RELEASE/
+
+# Training Configuration
+training:
+    n_workers: 1
+    train_iters: 3000
+    batch_size: 1
+    val_interval: 3000
+    print_interval: 50
+    loss:
+        name: 'cross_entropy'
+        size_average: True
+        
+    # Optmizer Configuration
+    optimizer:
+        name: sgd
+        lr: 1.0e-4
+        weight_decay: 0.0005
+        momentum: 0.99
+
+    # LR Schedule Configuration
+    lr_schedule:
+
+    # Resume from checkpoint  
+    resume: None 
+    
+    #./segnet_pascal_best_model.pkl
+    
