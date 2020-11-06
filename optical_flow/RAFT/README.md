@@ -1,11 +1,13 @@
 # RAFT
-This repository contains the source code for our paper:
+This folder contains the source code for the paper:
 
 [RAFT: Recurrent All Pairs Field Transforms for Optical Flow](https://arxiv.org/pdf/2003.12039.pdf)<br/>
 ECCV 2020 <br/>
 Zachary Teed and Jia Deng<br/>
 
 <img src="RAFT.png">
+
+edited by Farnaz Nouraei (farnaz.9515@gmail.com) for testing on custom dataset. Please clone the original RAFT repo for correct folder structures, and use shredder_template.py to split dataset videos into frames that can be input to RAFT demo.py.
 
 ## Requirements
 The code has been tested with PyTorch 1.6 and Cuda 10.1.
